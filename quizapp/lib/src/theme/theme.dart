@@ -28,7 +28,7 @@ class AppTheme {
         onSurface: LightColor.Darker,
         onBackground: LightColor.titleTextColor,
         onError: LightColor.titleTextColor,
-        brightness: Brightness.dark),
+        brightness: Brightness.light),
   );
 
   static TextStyle titleStyle =

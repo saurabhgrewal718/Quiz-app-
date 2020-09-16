@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "318116179278",
+    "firebase_url": "https://quiz-app-cc89a.firebaseio.com",
+    "project_id": "quiz-app-cc89a",
+    "storage_bucket": "quiz-app-cc89a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318116179278:android:08216ac3fe8484812c821f",
+        "android_client_info": {
+          "package_name": "com.example.quizapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318116179278-6ufhngbc3qn2ouim5ouaqiv7dg0ouka4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCura2ihrKUu6BDt9kfsd5oHQ3wXBAWYjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318116179278-6ufhngbc3qn2ouim5ouaqiv7dg0ouka4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
