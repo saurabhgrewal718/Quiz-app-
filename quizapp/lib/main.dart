@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/src/pages/quiz/quiz.dart';
 import 'package:quizapp/src/pages/quiz/startquiz.dart';
 import './src/pages/recomended_page.dart';
 import './src/pages/scores/score.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         GamePage.routeName : (ctx) => GamePage(),
         RecomendedPage.routeName : (ctx) => RecomendedPage(),
         ScorePage.routeName : (ctx) => ScorePage(),
-        Startquiz.routeName : (ctx) => Startquiz()
+        Startquiz.routeName : (ctx) => Startquiz(),
+        Quiz.routeName : (ctx) => Quiz(),
       },
     );
   }
