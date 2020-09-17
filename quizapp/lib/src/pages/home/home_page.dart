@@ -4,6 +4,7 @@ import '../recomended_page.dart';
 import '../scores/score.dart';
 import '../../theme/color/light_color.dart';
 import '../game/game.dart';
+import '../quiz/startquiz.dart';
 
 class HomePage extends StatefulWidget {
   static const routeName = './homepage';
@@ -68,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                 chipText2: "8 Cources",
                 isPrimaryCard: true,
                 imgPath:
-                    "https://jshopping.in/images/detailed/591/ibboll-Fashion-Mens-Optical-Glasses-Frames-Classic-Square-Wrap-Frame-Luxury-Brand-Men-Clear-Eyeglasses-Frame.jpg"),
+                    "https://hips.hearstapps.com/esquireuk.cdnds.net/16/39/980x980/square-1475143834-david-gandy.jpg?resize=480:*"),
             _card(
                 primary: Colors.white,
                 chipColor: LightColor.seeBlue,
@@ -169,43 +170,48 @@ class _HomePageState extends State<HomePage> {
       Widget backWidget,
       Color chipColor = LightColor.orange,
       bool isPrimaryCard = false}) {
-    return Container(
-        height: isPrimaryCard ? 190 : 180,
-        width: isPrimaryCard ? width * .32 : width * .32,
-        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-        decoration: BoxDecoration(
-            color: primary.withAlpha(200),
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-            boxShadow: <BoxShadow>[
-              BoxShadow(
-                  offset: Offset(0, 5),
-                  blurRadius: 10,
-                  color: LightColor.lightpurple.withAlpha(20))
-            ]),
-        child: ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(20)),
+    return GestureDetector(
+          onTap: (){
+            Navigator.of(context).pushNamed(Startquiz.routeName);
+          },
           child: Container(
-            child: Stack(
-              children: <Widget>[
-                backWidget,
-                Positioned(
-                    top: 20,
+          height: isPrimaryCard ? 190 : 180,
+          width: isPrimaryCard ? width * .32 : width * .32,
+          margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+          decoration: BoxDecoration(
+              color: primary.withAlpha(200),
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+              boxShadow: <BoxShadow>[
+                BoxShadow(
+                    offset: Offset(0, 5),
+                    blurRadius: 10,
+                    color: LightColor.lightpurple.withAlpha(20))
+              ]),
+          child: ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            child: Container(
+              child: Stack(
+                children: <Widget>[
+                  backWidget,
+                  Positioned(
+                      top: 20,
+                      left: 10,
+                      child: CircleAvatar(
+                        backgroundColor: Colors.grey.shade300,
+                        backgroundImage: NetworkImage(imgPath),
+                      )),
+                  Positioned(
+                    bottom: 10,
                     left: 10,
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey.shade300,
-                      backgroundImage: NetworkImage(imgPath),
-                    )),
-                Positioned(
-                  bottom: 10,
-                  left: 10,
-                  child: _cardInfo(chipText1, chipText2,
-                      LightColor.titleTextColor, chipColor,
-                      isPrimaryCard: isPrimaryCard),
-                )
-              ],
+                    child: _cardInfo(chipText1, chipText2,
+                        LightColor.titleTextColor, chipColor,
+                        isPrimaryCard: isPrimaryCard),
+                  )
+                ],
+              ),
             ),
-          ),
-        ));
+          )),
+    );
   }
 
   Widget _cardInfo(String title, String courses, Color textColor, Color primary,
