@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quizapp/src/pages/quiz/my_quiz_app.dart';
 import 'package:quizapp/src/pages/quiz/quiz.dart';
 
 class Startquiz extends StatefulWidget {
@@ -55,7 +56,7 @@ class _StartquizState extends State<Startquiz> {
                   minWidth: double.infinity,
                   height: 80,
                   onPressed: () {
-                     Navigator.of(context).pushReplacementNamed(Quiz.routeName); 
+                     Navigator.of(context).pushReplacementNamed(MyQuizApp.routeName); 
                   },
                   color: Colors.white,
                   elevation: 0,
