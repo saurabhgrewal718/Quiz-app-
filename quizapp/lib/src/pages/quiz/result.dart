@@ -53,7 +53,7 @@ class Result extends StatelessWidget {
                       children: [
                         Image.asset("assets/images/more.png"),
                         Center(
-                          child:Text("Next Quiz" ,
+                          child:Text("Next Qui" ,
                           style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Colors.black,
