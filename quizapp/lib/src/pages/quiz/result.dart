@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quizapp/src/pages/home/home_page.dart';
+import 'package:quizapp/src/pages/scores/score.dart';
 
 class Result extends StatelessWidget {
   final int resultScore;
@@ -46,41 +49,53 @@ class Result extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width*0.5,
-                    padding: EdgeInsets.all(10),
-                    child: Column(
-                      children: [
-                        Image.asset("assets/images/more.png"),
-                        Center(
-                          child:Text("Next Qui" ,
-                          style: GoogleFonts.openSans(
-                            textStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold)),
-                          ),
-                        )
-                      ],
-                    )
+                  GestureDetector(
+                     onTap: (){
+                       Navigator.of(context).pushReplacementNamed(HomePage.routeName);
+                       HapticFeedback.vibrate();
+                     },
+                     child: Container(
+                      width: MediaQuery.of(context).size.width*0.5,
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        children: [
+                          Image.asset("assets/images/more.png"),
+                          Center(
+                            child:Text("Next Quiz" ,
+                            style: GoogleFonts.openSans(
+                              textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold)),
+                            ),
+                          )
+                        ],
+                      )
+                    ),
                   ),
-                  Container(
-                    width: MediaQuery.of(context).size.width*0.5,
-                    padding: EdgeInsets.all(10),
-                    child: Column(
-                      children: [
-                        Image.asset("assets/images/mque.png"),
-                        Center(
-                          child:Text("View Profile" ,
-                          style: GoogleFonts.openSans(
-                            textStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold)),
-                          ),
-                        )
-                      ],
-                    )
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.of(context).pushReplacementNamed(ScorePage.routeName);
+                      HapticFeedback.vibrate();
+                    },
+                      child: Container(
+                      width: MediaQuery.of(context).size.width*0.5,
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        children: [
+                          Image.asset("assets/images/mque.png"),
+                          Center(
+                            child:Text("View Profile" ,
+                            style: GoogleFonts.openSans(
+                              textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold)),
+                            ),
+                          )
+                        ],
+                      )
+                    ),
                   )
                 ],
               ),
