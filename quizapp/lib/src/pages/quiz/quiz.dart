@@ -18,12 +18,20 @@ class Quiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Question(
-          questions[questionIndex]['questionText'],
+        Container(
+          height: MediaQuery.of(context).size.height *0.4,
+          color: Colors.cyanAccent,
+          child: Question(
+            questions[questionIndex]['questionText'],
+          ),
         ),
         ...(questions[questionIndex]['answers'] as List<Map<String, Object>>).map((answer) {
-          return Answer(() => answerQuestion(answer['score']), answer['text']);
+          return Container(
+            padding: EdgeInsets.all(10),
+            color: Colors.greenAccent,
+            child: Answer(() => answerQuestion(answer['score']), answer['text']));
         }).toList()
       ],
     );

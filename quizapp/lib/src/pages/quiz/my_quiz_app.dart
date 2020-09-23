@@ -14,7 +14,7 @@ class MyQuizApp extends StatefulWidget {
 class _MyAppState extends State<MyQuizApp> {
   final _questions = const [
     {
-      'questionText': 'What\'s your favorite color?',
+      'questionText': 'What\'s your favorite color? What\'s your favorite color? What\'s your favorite color?',
       'answers': [
         {'text': 'Black', 'score': 10},
         {'text': 'Red', 'score': 5},
@@ -23,7 +23,7 @@ class _MyAppState extends State<MyQuizApp> {
       ],
     },
     {
-      'questionText': 'What\'s your favorite animal?',
+      'questionText': 'What\'s your favorite animal? What\'s your favorite color? What\'s your favorite color? What\'s your favorite color?  What\'s your favorite color?',
       'answers': [
         {'text': 'Rabbit', 'score': 3},
         {'text': 'Snake', 'score': 11},

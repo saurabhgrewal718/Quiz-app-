@@ -8,6 +8,8 @@ class Question extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(questionText.length);
+    double textsize = questionText.length > 83 ? 28 : 36;
     return Container(
       width: double.infinity,
       margin: EdgeInsets.all(10),
@@ -16,7 +18,7 @@ class Question extends StatelessWidget {
           Headofapp(title: "Quiz App",subtitle: "This is my subtitle",),
           Text(
               questionText,
-              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: textsize, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
         ],
