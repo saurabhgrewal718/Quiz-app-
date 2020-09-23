@@ -1,3 +1,4 @@
+import 'package:animated_button/animated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quizapp/src/pages/quiz/my_quiz_app.dart';
@@ -39,41 +40,27 @@ class _StartquizState extends State<Startquiz> {
                 
                 child:Text("this is a container") 
               ),
+              AnimatedButton(
+                child: Text(
+                  'Start Quiz',
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                height: 80,
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed(MyQuizApp.routeName); 
+                },
+                width: 300,
+                color: Colors.redAccent,
+                shadowDegree: ShadowDegree.dark,
+                enabled: true,
+              ), 
+
               SizedBox(height: 20,),
-              Container(
-                margin: EdgeInsets.all(20),
-                width: MediaQuery.of(context).size.width * 0.75,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  border: Border(
-                    bottom: BorderSide(color: Colors.black),
-                    top: BorderSide(color: Colors.black),
-                    left: BorderSide(color: Colors.black),
-                    right: BorderSide(color: Colors.black),
-                  )
-                ),
-                child: MaterialButton(
-                  minWidth: double.infinity,
-                  height: 80,
-                  onPressed: () {
-                     Navigator.of(context).pushReplacementNamed(MyQuizApp.routeName); 
-                  },
-                  color: Colors.white,
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50)
-                  ),
-                  child: Text("Start Quiz" ,
-                  style: GoogleFonts.openSans(
-                    textStyle: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        letterSpacing: 1,
-                        fontWeight: FontWeight.bold)),
-                  ),
-                ),
-                )
-              
+
             ],
           ),
       ),

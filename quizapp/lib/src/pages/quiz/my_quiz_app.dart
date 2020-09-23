@@ -28,7 +28,7 @@ class _MyAppState extends State<MyQuizApp> {
         {'text': 'Rabbit', 'score': 3},
         {'text': 'Snake', 'score': 11},
         {'text': 'Elephant', 'score': 5},
-        {'text': 'Lion', 'score': 9},
+        {'text': 'Lion What\'s your favorite sjkfn vkjnf', 'score': 9},
       ],
     },
     {

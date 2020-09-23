@@ -22,7 +22,7 @@ class Quiz extends StatelessWidget {
       children: [
         Container(
           height: MediaQuery.of(context).size.height *0.4,
-          color: Colors.cyanAccent,
+          color: Colors.white,
           child: Question(
             questions[questionIndex]['questionText'],
           ),
@@ -30,7 +30,7 @@ class Quiz extends StatelessWidget {
         ...(questions[questionIndex]['answers'] as List<Map<String, Object>>).map((answer) {
           return Container(
             padding: EdgeInsets.all(10),
-            color: Colors.greenAccent,
+            color: Colors.white,
             child: Answer(() => answerQuestion(answer['score']), answer['text']));
         }).toList()
       ],

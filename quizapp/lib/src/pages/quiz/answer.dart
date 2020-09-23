@@ -10,6 +10,8 @@ class Answer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(answerText.length);
+    double textsize = answerText.length > 25 ? 16 : 22;
     return Container(
       padding: EdgeInsets.all(10),
       child: AnimatedButton(
@@ -17,7 +19,7 @@ class Answer extends StatelessWidget {
           child: Text(
                 answerText,
                 style: TextStyle(
-                fontSize: 22,
+                fontSize: textsize,
                 color: Colors.white,
                 fontWeight: FontWeight.w500,
                 ),
