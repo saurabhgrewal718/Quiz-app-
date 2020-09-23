@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/src/pages/widgets/head_of_app.dart';
 
 import './question.dart';
 import './answer.dart';
@@ -17,9 +18,21 @@ class Quiz extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int totalquestions = questions.length;
+    double difference = 100/totalquestions;
+    double initialWidth = 0;
+
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        Headofapp(title: "Quiz App",subtitle: "This is my subtitle",),
+        Container(
+          width: initialWidth + difference,
+          height: 10,
+          color: Colors.greenAccent,
+
+        ),
         Container(
           height: MediaQuery.of(context).size.height *0.4,
           color: Colors.white,
