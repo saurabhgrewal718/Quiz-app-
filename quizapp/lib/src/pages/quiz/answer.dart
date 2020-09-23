@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:animated_button/animated_button.dart';
+
 
 class Answer extends StatelessWidget {
   final Function selectHandler;
@@ -8,14 +10,21 @@ class Answer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      child: RaisedButton(
-        color: Colors.blue,
-        textColor: Colors.white,
-        child: Text(answerText),
-        onPressed: selectHandler,
-      ),
-    );
+    return Center(
+      child: AnimatedButton(
+          child: Text(
+                answerText,
+                style: TextStyle(
+                fontSize: 22,
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+                ),
+           ),
+          onPressed: selectHandler,
+          ),
+      );
   }
 }
+
+
+
