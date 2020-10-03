@@ -27,14 +27,14 @@ class Quiz extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Headofapp(title: "Quiz App",subtitle: "This is my subtitle",),
-        Container(
-          width: initialWidth + difference,
-          height: 10,
-          color: Colors.greenAccent,
+        // Container(
+        //   width: initialWidth + difference,
+        //   height: 10,
+        //   color: Colors.greenAccent,
 
-        ),
+        // ),
         Container(
-          height: MediaQuery.of(context).size.height *0.4,
+          height: MediaQuery.of(context).size.height *0.25,
           color: Colors.white,
           child: Question(
             questions[questionIndex]['questionText'],

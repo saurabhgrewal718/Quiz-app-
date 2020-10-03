@@ -8,7 +8,7 @@ class Question extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print(questionText.length);
-    double textsize = questionText.length > 83 ? 28 : 36;
+    double textsize = questionText.length > 83 ? 26 : 32;
     return Container(
       width: double.infinity,
       margin: EdgeInsets.all(10),

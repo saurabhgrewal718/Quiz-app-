@@ -14,7 +14,7 @@ class Headofapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(top:8.0),
       child: AppBar(
           elevation: 0,
           brightness: Brightness.light,
