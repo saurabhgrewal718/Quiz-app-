@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/src/pages/auth/loginScreen.dart';
+import 'package:quizapp/src/pages/auth/signupscreen.dart';
+import 'package:quizapp/src/pages/auth/welcome.dart';
 import './src/pages/quiz/my_quiz_app.dart';
 import 'package:quizapp/src/pages/quiz/quiz.dart';
 import 'package:quizapp/src/pages/quiz/startquiz.dart';
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: AppTheme.lightTheme,
-      home: HomePage(),
+      home: Welcome(),
       debugShowCheckedModeBanner: false,
       routes: {
         HomePage.routeName : (ctx) => HomePage(),
@@ -25,7 +28,10 @@ class MyApp extends StatelessWidget {
         RecomendedPage.routeName : (ctx) => RecomendedPage(),
         ScorePage.routeName : (ctx) => ScorePage(),
         Startquiz.routeName : (ctx) => Startquiz(),
-        MyQuizApp.routeName : (ctx) => MyQuizApp()
+        MyQuizApp.routeName : (ctx) => MyQuizApp(),
+        Welcome.routeName : (ctx) => Welcome(),
+        LoginScreen.routeName : (ctx) => LoginScreen(),
+        SignupScreen.routeName : (ctx) => SignupScreen()
       },
     );
   }
