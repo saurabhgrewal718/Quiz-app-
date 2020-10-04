@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/src/pages/auth/anonmous.dart';
 import '../../../Animation/FadeAnimation.dart';
 import './loginScreen.dart';
 import './signupscreen.dart';
@@ -21,12 +22,12 @@ class Welcome extends StatelessWidget {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  FadeAnimation(1, Text("MDU Connect", style: TextStyle(
+                  FadeAnimation(1, Text("Bixabay", style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30
                   ),)),
                   SizedBox(height: 20,),
-                  FadeAnimation(1.2, Text("Missing your University life? Connect,Study and make Friends! Student hub of University!", 
+                  FadeAnimation(1.2, Text("Stay Connected with your people and that way do amazing things that needs to be changed after sometime!", 
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.grey[700],
@@ -36,7 +37,7 @@ class Welcome extends StatelessWidget {
               ),
               Container(
                 height: MediaQuery.of(context).size.height / 3,
-                child : Image.asset('assets/images/hoodie.jpg')
+                child : Image.asset('assets/images/mque.png')
                 
               ),
               Column(
@@ -88,7 +89,24 @@ class Welcome extends StatelessWidget {
                         fontSize: 18
                       ),),
                     ),
-                  ))
+                  )),
+                  SizedBox(height:20),
+                  MaterialButton(
+                    minWidth: double.infinity,
+                    height: 60,
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(Anonmous.routeName,);
+                      // Navigator.push(context, MaterialPageRoute(builder: (context) => SignupPage()));
+                    },
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50)
+                    ),
+                    child: Text("Skip This!", style: TextStyle(
+                      fontWeight: FontWeight.w600, 
+                      fontSize: 18
+                    ),),
+                  ),
                 ],
               )
             ],
