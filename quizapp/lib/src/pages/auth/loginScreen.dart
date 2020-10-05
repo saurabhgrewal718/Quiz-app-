@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/src/pages/home/home_page.dart';
 //import './loginform.dart';
 import '../../../Animation/FadeAnimation.dart';
 import './signupscreen.dart';
@@ -43,6 +44,21 @@ class LoginScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 30,),
+            FadeAnimation(1, Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text("Don't have an account?"),
+                  FlatButton(
+                        child: Text("Login", style: TextStyle(
+                        fontWeight: FontWeight.w600, fontSize: 18
+                      ),),
+                        onPressed: (){
+                          Navigator.of(context).pop();
+                          Navigator.of(context).pushNamed(HomePage.routeName);
+                        }
+                      ),
+                ],
+              )),
             SingleChildScrollView(
               //child: FadeAnimation(1,LoginForm()),
             ),
@@ -62,6 +78,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                 ],
               )),
+              
           ],
         ),
       ),

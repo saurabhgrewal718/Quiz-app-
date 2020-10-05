@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quizapp/src/pages/auth/anonmous.dart';
 import 'package:quizapp/src/pages/auth/loginScreen.dart';
+import 'package:quizapp/src/pages/auth/signOne.dart';
 import 'package:quizapp/src/pages/auth/signupscreen.dart';
 import 'package:quizapp/src/pages/auth/welcome.dart';
 import './src/pages/quiz/my_quiz_app.dart';
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
         Welcome.routeName : (ctx) => Welcome(),
         LoginScreen.routeName : (ctx) => LoginScreen(),
         SignupScreen.routeName : (ctx) => SignupScreen(),
-        Anonmous.routeName : (ctx) => Anonmous()
+        Anonmous.routeName : (ctx) => Anonmous(),
+        SignOne.routeName : (ctx) => SignOne()
       },
     );
   }
