@@ -47,8 +47,7 @@ class LoginScreen extends StatelessWidget {
             FadeAnimation(1, Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text("Don't have an account?"),
-                  FlatButton(
+                      FlatButton(
                         child: Text("Login", style: TextStyle(
                         fontWeight: FontWeight.w600, fontSize: 18
                       ),),

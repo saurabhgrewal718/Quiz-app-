@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/src/pages/home/home_page.dart';
 
 class SignOne extends StatefulWidget {
   static const routeName="/signone";
@@ -10,8 +11,18 @@ class _SignOneState extends State<SignOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Container(
-        child:Text("this is the sceond page")
+      body:Column(
+        children: [
+          Container(
+            child:Text("this is the sceond page")
+          ),
+          FlatButton(
+            child: Text("GO to home"),
+            onPressed: (){
+              Navigator.of(context).pushReplacementNamed(HomePage.routeName);
+            },
+          )
+        ],
       )
     );
   }

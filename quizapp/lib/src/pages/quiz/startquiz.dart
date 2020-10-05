@@ -14,17 +14,29 @@ class _StartquizState extends State<Startquiz> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          body: Container(
+      resizeToAvoidBottomInset: true,
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0,
+        brightness: Brightness.light,
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back_ios, size: 20, color: Colors.black,),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.blue[200],Colors.greenAccent])),
+            color: Colors.white
+          ),
           child: Column(
             children: [
               Container(
                 width: double.infinity,
-                height: MediaQuery.of(context).size.height*0.25,
+                height: MediaQuery.of(context).size.height*0.15,
                 
                 child:Text("this is a container")
               ),
@@ -63,12 +75,8 @@ class _StartquizState extends State<Startquiz> {
 
             ],
           ),
+      )
       ),
     );
   }
 }
-
-
-
-
-
