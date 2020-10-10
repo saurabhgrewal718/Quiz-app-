@@ -495,14 +495,14 @@ class _HomePageState extends State<HomePage> {
         bottomNavigationBar: BottomNavigationBar(
           showSelectedLabels: false,
           showUnselectedLabels: false,
-          selectedItemColor: LightColor.purple,
-          unselectedItemColor: Colors.grey.shade300,
+          selectedItemColor: Colors.black,
+          selectedFontSize: 18,
+          unselectedItemColor: Colors.grey[300],
           type: BottomNavigationBarType.fixed,
           currentIndex: 0,
           items: [
             _bottomIcons(Icons.home),
             _bottomIcons(Icons.star_border),
-            _bottomIcons(Icons.book),
             _bottomIcons(Icons.person),
           ],
           onTap: (index) {
@@ -513,9 +513,6 @@ class _HomePageState extends State<HomePage> {
               Navigator.of(context).pushReplacementNamed(RecomendedPage.routeName);
             }
             if(index == 2){
-              Navigator.of(context).pushReplacementNamed(GamePage.routeName);
-            }
-            if(index == 3){
               Navigator.of(context).pushReplacementNamed(ScorePage.routeName);
             }
 

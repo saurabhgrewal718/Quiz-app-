@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/src/pages/quiz/my_quiz_app.dart';
+import 'package:quizapp/src/pages/quiz/startquiz.dart';
 import '../helper/courseModel.dart';
 import '../helper/quad_clipper.dart';
 import '../pages/game/game.dart';
@@ -145,6 +147,13 @@ class _RecomendedPageState extends State<RecomendedPage> {
               endIndent: 20,
               indent: 20,
             ),
+            _courceInfo(CourseList.list[1], _decorationContainerC(),
+                background: LightColor.grey),
+            Divider(
+              thickness: 1,
+              endIndent: 20,
+              indent: 20,
+            ),
             _courceInfo(CourseList.list[1], _decorationContainerB(),
                 background: LightColor.darkOrange),
             Divider(
@@ -152,8 +161,19 @@ class _RecomendedPageState extends State<RecomendedPage> {
               endIndent: 20,
               indent: 20,
             ),
-            _courceInfo(CourseList.list[2], _decorationContainerC(),
-                background: LightColor.lightOrange2),
+            _courceInfo(CourseList.list[1], _decorationContainerA(
+              Colors.black,-120,10
+            ),
+                background: LightColor.darkBlue),
+            Divider(
+              thickness: 1,
+              endIndent: 20,
+              indent: 20,
+            ),
+            _courceInfo(CourseList.list[2], _decorationContainerA(
+              Colors.lightBlue,-100,10
+            ),
+                background: Colors.greenAccent),
           ],
         ),
       ),
@@ -184,70 +204,77 @@ class _RecomendedPageState extends State<RecomendedPage> {
   }
 
   Widget _courceInfo(CourseModel model, Widget decoration, {Color background}) {
-    return Container(
-        height: 170,
-        width: width - 20,
-        child: Row(
-          children: <Widget>[
-            AspectRatio(
-              aspectRatio: .7,
-              child: _card(primaryColor: background, backWidget: decoration),
-            ),
-            Expanded(
-                child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+    return GestureDetector(
+          onTap: (){
+            Navigator.of(context).pushNamed(Startquiz.routeName);
+          },
+          child: Card(
+            child: Container(
+            height: 170,
+            width: width - 20,
+            child: Row(
               children: <Widget>[
-                SizedBox(height: 15),
-                Container(
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: <Widget>[
-                      Expanded(
-                        child: Text(model.name,
-                            style: TextStyle(
-                                color: LightColor.purple,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold)),
-                      ),
-                      CircleAvatar(
-                        radius: 3,
-                        backgroundColor: background,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(model.noOfCource,
-                          style: TextStyle(
-                            color: LightColor.grey,
-                            fontSize: 14,
-                          )),
-                      SizedBox(width: 10)
-                    ],
-                  ),
+                AspectRatio(
+                  aspectRatio: .7,
+                  child: _card(primaryColor: background, backWidget: decoration),
                 ),
-                Text(model.university,
-                    style: AppTheme.h6Style.copyWith(
-                      fontSize: 12,
-                      color: LightColor.grey,
-                    )),
-                SizedBox(height: 15),
-                Text(model.description,
-                    style: AppTheme.h6Style.copyWith(
-                        fontSize: 12, color: LightColor.extraDarkPurple)),
-                SizedBox(height: 15),
-                Row(
+                Expanded(
+                    child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    _chip(model.tag1, LightColor.darkOrange, height: 5),
-                    SizedBox(
-                      width: 10,
+                    SizedBox(height: 15),
+                    Container(
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: <Widget>[
+                          Expanded(
+                            child: Text(model.name,
+                                style: TextStyle(
+                                    color: LightColor.purple,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                          CircleAvatar(
+                            radius: 3,
+                            backgroundColor: background,
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(model.noOfCource,
+                              style: TextStyle(
+                                color: LightColor.grey,
+                                fontSize: 14,
+                              )),
+                          SizedBox(width: 10)
+                        ],
+                      ),
                     ),
-                    _chip(model.tag2, LightColor.seeBlue, height: 5),
+                    Text(model.university,
+                        style: AppTheme.h6Style.copyWith(
+                          fontSize: 12,
+                          color: LightColor.grey,
+                        )),
+                    SizedBox(height: 15),
+                    Text(model.description,
+                        style: AppTheme.h6Style.copyWith(
+                            fontSize: 12, color: LightColor.extraDarkPurple)),
+                    SizedBox(height: 15),
+                    Row(
+                      children: <Widget>[
+                        _chip(model.tag1, LightColor.darkOrange, height: 5),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        _chip(model.tag2, LightColor.seeBlue, height: 5),
+                      ],
+                    )
                   ],
-                )
+                ))
               ],
-            ))
-          ],
-        ));
+            )),
+      ),
+    );
   }
 
   Widget _chip(String text, Color textColor,
@@ -335,7 +362,7 @@ class _RecomendedPageState extends State<RecomendedPage> {
           left: -35,
           child: CircleAvatar(
             radius: 70,
-            backgroundColor: Color(0xfffeeaea),
+            backgroundColor: Colors.blueGrey,
           ),
         ),
         Positioned(
@@ -379,14 +406,14 @@ class _RecomendedPageState extends State<RecomendedPage> {
         bottomNavigationBar: BottomNavigationBar(
           showSelectedLabels: false,
           showUnselectedLabels: false,
-          selectedItemColor: LightColor.purple,
-          unselectedItemColor: Colors.grey.shade300,
+          selectedItemColor: Colors.black,
+          selectedFontSize: 18,
+          unselectedItemColor: Colors.grey[300],
           type: BottomNavigationBarType.fixed,
           currentIndex: 1,
           items: [
             _bottomIcons(Icons.home),
             _bottomIcons(Icons.star_border),
-            _bottomIcons(Icons.book),
             _bottomIcons(Icons.person),
           ],
           onTap: (index) {
@@ -397,9 +424,6 @@ class _RecomendedPageState extends State<RecomendedPage> {
               Navigator.of(context).pushReplacementNamed(RecomendedPage.routeName);
             }
             if(index == 2){
-              Navigator.of(context).pushReplacementNamed(GamePage.routeName);
-            }
-            if(index == 3){
               Navigator.of(context).pushReplacementNamed(ScorePage.routeName);
             }
           
@@ -411,7 +435,7 @@ class _RecomendedPageState extends State<RecomendedPage> {
             children: <Widget>[
               _header(context),
               SizedBox(height: 20),
-              _categoryRow("Start a new career"),
+              // _categoryRow("Start a new career"),
               _courseList()
             ],
           ),
