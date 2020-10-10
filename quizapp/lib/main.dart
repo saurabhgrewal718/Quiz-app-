@@ -8,7 +8,7 @@ import './src/pages/quiz/my_quiz_app.dart';
 import 'package:quizapp/src/pages/quiz/quiz.dart';
 import 'package:quizapp/src/pages/quiz/startquiz.dart';
 import './src/pages/recomended_page.dart';
-import './src/pages/scores/score.dart';
+import './src/pages/profile/score.dart';
 
 import './src/pages/home/home_page.dart';
 import './src/theme/theme.dart';

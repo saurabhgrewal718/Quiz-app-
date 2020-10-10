@@ -5,7 +5,7 @@ import '../pages/game/game.dart';
 import '../theme/color/light_color.dart';
 import '../theme/theme.dart';
 import './home/home_page.dart';
-import './scores/score.dart';
+import './profile/score.dart';
 
 class RecomendedPage extends StatefulWidget {
   static const routeName = './recomendedpage';

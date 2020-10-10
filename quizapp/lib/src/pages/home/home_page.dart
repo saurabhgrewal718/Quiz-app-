@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../helper/quad_clipper.dart';
 import '../recomended_page.dart';
-import '../scores/score.dart';
+import '../profile/score.dart';
 import '../../theme/color/light_color.dart';
 import '../game/game.dart';
 import '../quiz/startquiz.dart';

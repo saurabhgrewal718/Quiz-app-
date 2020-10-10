@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/src/pages/profile/profile.dart';
 import '../game/game.dart';
 import '../../theme/color/light_color.dart';
 import '../recomended_page.dart';
@@ -48,14 +49,7 @@ class _ScorePageState extends State<ScorePage> {
             }
           },
         ),
-        body: SingleChildScrollView(
-            child: Container(
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 20),
-              Text('this is the score page')
-            ],
-          ),
-        )));
+        body: Profile()
+      );
   }
 }

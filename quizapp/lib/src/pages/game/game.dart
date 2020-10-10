@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../home/home_page.dart';
-import '../scores/score.dart';
+import '../profile/score.dart';
 import '../../theme/color/light_color.dart';
 import '../recomended_page.dart';
 

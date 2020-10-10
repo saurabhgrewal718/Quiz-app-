@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quizapp/src/pages/home/home_page.dart';
-import 'package:quizapp/src/pages/scores/score.dart';
+import 'package:quizapp/src/pages/profile/score.dart';
 
 class Result extends StatelessWidget {
   final int resultScore;
