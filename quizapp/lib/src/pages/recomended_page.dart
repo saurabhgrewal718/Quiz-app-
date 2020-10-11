@@ -56,11 +56,13 @@ class _RecomendedPageState extends State<RecomendedPage> {
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Stack(
                         children: <Widget>[
-                          Icon(
-                            Icons.keyboard_arrow_left,
-                            color: Colors.white,
-                            size: 40,
-                          ),
+                          // IconButton(
+                          //   icon: Icon(Icons.keyboard_arrow_left),
+                          //   color: Colors.white,
+                          //   onPressed: () {
+                          //     Navigator.of(context).pushReplacement(newRoute)
+                          //   },
+                          // ),
                           Align(
                               alignment: Alignment.center,
                               child: Text(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quizapp/src/pages/home/home_page.dart';
 //import './loginform.dart';
 import '../../../Animation/FadeAnimation.dart';
-import './signupscreen.dart';
+import './signup/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   static const routeName = '/login';

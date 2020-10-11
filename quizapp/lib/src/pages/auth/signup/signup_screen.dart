@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quizapp/src/pages/auth/signOne.dart';
-//import './signupForm.dart';
-import '../../../Animation/FadeAnimation.dart';
-import './loginScreen.dart';
+import 'package:quizapp/src/pages/home/home_page.dart';
+import './signup_form.dart';
+import '../../../../animation/FadeAnimation.dart';
 
 class SignupScreen extends StatefulWidget {
   static const routeName = '/signup';
@@ -51,24 +50,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),)),
                 ],
               ),
-              //SignupForm(), 
-              
-              FadeAnimation(1, Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text("Don't have an account?"),
-                  FlatButton(
-                        child: Text("Login", style: TextStyle(
-                        fontWeight: FontWeight.w600, fontSize: 18
-                      ),),
-                        onPressed: (){
-                          Navigator.of(context).pop();
-                          Navigator.of(context).pushNamed(SignOne.routeName);
-                        }
-                      ),
-                ],
-              )), 
-              SizedBox(height: 30,),           
+              SignupForm(),             
               FadeAnimation(1, Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -78,13 +60,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         fontWeight: FontWeight.w600, fontSize: 18
                       ),),
                         onPressed: (){
-                          // Firestore.instance.collection('users/e0M946OayF2HIgrKomjN/profile')
-                          // .document('DBQG6ku1u3LUgkCZKN93')
-                          // .setData({
-                          //    'text':""
-                          //   });
-                          Navigator.of(context).pop();
-                          Navigator.of(context).pushNamed(LoginScreen.routeName,); 
+                          Navigator.of(context).pushNamed(HomePage.routeName,); 
                         }
                       ),
                 ],

@@ -453,7 +453,7 @@ class _HomePageState extends State<HomePage> {
               Positioned(
                   top: -60,
                   left: -65,
-                  child: _circularContainer(width * .5, Colors.yellow[300])),
+                  child: _circularContainer(width * .4, Colors.grey)),
               Positioned(
                   top: -230,
                   right: -30,
@@ -467,11 +467,7 @@ class _HomePageState extends State<HomePage> {
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Stack(
                         children: <Widget>[
-                          Icon(
-                            Icons.keyboard_arrow_left,
-                            color: Colors.white,
-                            size: 40,
-                          ),
+                          
                           Align(
                               alignment: Alignment.center,
                               child: Text(

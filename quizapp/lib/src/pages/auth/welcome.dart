@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quizapp/src/pages/auth/anonmous.dart';
 import '../../../Animation/FadeAnimation.dart';
 import './loginScreen.dart';
-import './signupscreen.dart';
+import './signup/signup_screen.dart';
 
 
 class Welcome extends StatelessWidget {
