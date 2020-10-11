@@ -29,7 +29,7 @@ class _RecomendedPageState extends State<RecomendedPage> {
           height: 120,
           width: width,
           decoration: BoxDecoration(
-            color: LightColor.orange,
+            color: Colors.black,
           ),
           child: Stack(
             fit: StackFit.expand,
@@ -37,12 +37,12 @@ class _RecomendedPageState extends State<RecomendedPage> {
             children: <Widget>[
               Positioned(
                   top: 10,
-                  right: -120,
-                  child: _circularContainer(300, LightColor.lightOrange2)),
+                  right: -20,
+                  child: _circularContainer(300, Colors.grey)),
               Positioned(
-                  top: -60,
-                  left: -65,
-                  child: _circularContainer(width * .5, LightColor.darkOrange)),
+                  top: -90,
+                  left: -95,
+                  child: _circularContainer(width * .5, Colors.greenAccent)),
               Positioned(
                   top: -230,
                   right: -30,

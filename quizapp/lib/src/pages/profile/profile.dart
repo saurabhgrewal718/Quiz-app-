@@ -282,7 +282,7 @@ var _isLoading= false;
                           Align(
                               alignment: Alignment.center,
                               child: Text(
-                                "Recomended",
+                                "Profile",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 30,
